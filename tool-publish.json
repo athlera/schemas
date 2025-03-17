@@ -15,6 +15,12 @@
     "documentation": {
       "type": "string"
     },
+    "categories": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "package": {
       "type": "object",
       "properties": {
@@ -26,12 +32,16 @@
         },
         "repo": {
           "type": "string"
+        },
+        "rest": {
+          "type": "string"
         }
       },
       "required": [
         "name",
         "version",
-        "repo"
+        "repo",
+        "rest"
       ]
     },
     "author": {
@@ -62,30 +72,23 @@
       ]
     },
     "pricing": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "price": {
-            "type": "number"
-          },
-          "currency": {
-            "type": "string"
-          }
+      "type": "object",
+      "properties": {
+        "monthly": {
+          "type": "number"
         },
-        "required": [
-          "name",
-          "description",
-          "price",
-          "currency"
-        ]
-      }
+        "yearly": {
+          "type": "number"
+        },
+        "lifetime": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "monthly",
+        "yearly",
+        "lifetime"
+      ]
     },
     "actions": {
       "type": "array",
@@ -132,6 +135,7 @@
     "icon",
     "description",
     "documentation",
+    "categories",
     "package",
     "author",
     "pricing",
