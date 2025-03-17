@@ -1,0 +1,140 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "icon": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "documentation": {
+      "type": "string"
+    },
+    "package": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "repo": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "version",
+        "repo"
+      ]
+    },
+    "author": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "logo": {
+          "type": "string"
+        },
+        "bio": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "name",
+        "email",
+        "url",
+        "logo",
+        "bio"
+      ]
+    },
+    "pricing": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "currency": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "name",
+          "description",
+          "price",
+          "currency"
+        ]
+      }
+    },
+    "actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "settings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "type": {
+                  "type": "string"
+                },
+                "default": {}
+              },
+              "required": [
+                "name",
+                "description",
+                "type",
+                "default"
+              ]
+            }
+          }
+        },
+        "required": [
+          "name",
+          "settings"
+        ]
+      }
+    }
+  },
+  "required": [
+    "name",
+    "icon",
+    "description",
+    "documentation",
+    "package",
+    "author",
+    "pricing",
+    "actions"
+  ]
+}
